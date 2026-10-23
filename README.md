@@ -6,7 +6,7 @@ A reference-motion-conditioned whole-body controller for Unitree G1, using a lea
 
 This is an independent reproduction **derived from [CuboiLeo/SuperMimic-Reproduced](https://github.com/CuboiLeo/SuperMimic-Reproduced), commit `d9be385b3eeb13a638fb33fb200d3bfd9be9839f`**. It is not the authors' official implementation. The original work is [SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model](https://arxiv.org/abs/2610.28480) ([project](https://supermimic.github.io/)).
 
-**Release state:** source code and six 44k validation demos are provided in this repository. Sanitized 32k/36k weights are packaged separately. Code is MIT; weight distribution authorization is confirmed by the publisher; the separate weight license text is pending. See [WEIGHTS_NOTICE.md](WEIGHTS_NOTICE.md).
+**Release state:** source code and six 44k validation demos are provided in this repository. Sanitized 32k/36k weights are available in [v0.1.0-rc1](https://github.com/kangzejian1896/supermimic-g1-reproduction/releases/tag/v0.1.0-rc1). Code is MIT; weight distribution authorization is confirmed by the publisher; the separate weight license text is pending. See [WEIGHTS_NOTICE.md](WEIGHTS_NOTICE.md).
 
 [44k validation demos](#validation-demos--44k) · [Model card](docs/MODEL_CARD.md) · [Paper alignment](docs/PAPER_ALIGNMENT.md) · [Data format](docs/DATA.md) · [Validation](docs/VALIDATION.md)
 
@@ -146,7 +146,7 @@ Evaluate immutable numbered checkpoints on a separate GPU if training is running
 | `supermimic_g1_036000_models.pt` | Policy, world model, critic + config | Model-only training initialization |
 | `supermimic_g1_032000_policy.pt` | Policy + portable config | Matches the public 32k video demo |
 
-Weights are packaged separately from the Git source; see [weights/README.md](weights/README.md). No raw data, replay, text annotations, optimizer states, per-motion scores, or internal filesystem paths are included in these exports. SHA256 files accompany the prepared artifacts. PyTorch restricted loading (`weights_only=True`) is verified.
+Download the [32k/36k weights and checksums](https://github.com/kangzejian1896/supermimic-g1-reproduction/releases/tag/v0.1.0-rc1) from the candidate release. Weights are packaged separately from the Git source; see [weights/README.md](weights/README.md). No raw data, replay, text annotations, optimizer states, per-motion scores, or internal filesystem paths are included in these exports. SHA256 files accompany the prepared artifacts. PyTorch restricted loading (`weights_only=True`) is verified.
 
 The 36k checkpoint's existing native benchmark: **0 failures / 128 validation clips, mean normalized return 0.8811**; **58 failures / 84,287 training clips, return 0.9091**. Training-set coverage is not generalization. This uses our processed datav5 split, not the original paper's full dataset/filtering. The public 32k demo uses a different zero-initial-velocity visualization protocol; its RMSE must not be equated to native benchmark return. See the model card for limitations.
 
