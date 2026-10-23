@@ -8,7 +8,7 @@
 - Companion export: iteration 32,000, matching the earlier public demonstration, 4.98 logged training hours.
 - Current README demos: iteration 44,000; 6.82 logged training hours (about 6 h 49 min) on one NVIDIA A800-SXM4-80GB. Six owner-selected validation examples: 08, 17, 26, 41, 44, 114. These demos are newer than the prepared 32k/36k weight exports; see [demo_manifest.json](demo_manifest.json).
 - Prepared locally on 2026-10-23. This is an intermediate checkpoint, not a completed 320k schedule or an official paper release.
-- Weight distribution authorization: **confirmed by the publisher on 2026-10-23**. The specific weight license text remains to be supplied, separately from the MIT source-code license. See WEIGHTS_NOTICE.md. No public model-repository URL exists yet.
+- Weight distribution authorization: **confirmed by the publisher on 2026-10-23**. The specific weight license text remains to be supplied, separately from the MIT source-code license. See WEIGHTS_NOTICE.md. Source and release assets are maintained at [kangzejian1896/supermimic-g1-reproduction](https://github.com/kangzejian1896/supermimic-g1-reproduction).
 
 ## Inputs and outputs
 

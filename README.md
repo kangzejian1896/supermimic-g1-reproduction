@@ -1,27 +1,3 @@
-
-
-https://github.com/user-attachments/assets/3c47440c-7b8d-41a5-8249-4109e67e7e0e
-
-
-
-https://github.com/user-attachments/assets/d5c995c7-f4d2-4588-9480-719d0f22f8c3
-
-
-
-https://github.com/user-attachments/assets/acf1fa92-a77a-486c-8158-f8da71516714
-
-
-
-https://github.com/user-attachments/assets/39655761-973b-4621-8d7d-608af9a1ce64
-
-
-
-https://github.com/user-attachments/assets/0a794947-1b7b-4c1c-8d8e-027eee0adbf3
-
-
-
-https://github.com/user-attachments/assets/98804292-39f0-488d-a829-f43c5bb415e5
-
 # SuperMimic G1
 
 **Independent reproduction · Differentiable world-model control · MuJoCo Warp**
@@ -46,19 +22,31 @@ The full processed **BONES-SEED datav5 training split** contains 30,619,722 fram
 
 **Left: kinematic reference. Right: actual SuperMimic MuJoCo Warp rollout.** All six videos below use the **44k** checkpoint, with a shared camera and timeline, full motion duration and on-screen errors. These are reference-conditioned control results; the text describes the motion and is not a policy input.
 
-Click a thumbnail to open its MP4. The repository also includes a [six-video gallery](docs/index.html) with playback and speed controls; serve the repository locally with `python3 -m http.server 8000`, then open `http://localhost:8000/docs/`.
+Play the six videos directly below. The repository also includes a [local six-video gallery](docs/index.html) with speed controls: run `python3 -m http.server 8000` from the repository root and open `http://localhost:8000/docs/`.
 
-| val 08 · Side stretch | val 17 · Lateral dance |
-|:--:|:--:|
-| [![Side stretch](docs/media/val_08.jpg)](docs/media/val_08.mp4) | [![Lateral dance](docs/media/val_17.jpg)](docs/media/val_17.mp4) |
+### val 08 · Side stretch
 
-| val 26 · Backward jump | val 41 · Balletic turn |
-|:--:|:--:|
-| [![Backward jump](docs/media/val_26.jpg)](docs/media/val_26.mp4) | [![Balletic turn](docs/media/val_41.jpg)](docs/media/val_41.mp4) |
+https://github.com/user-attachments/assets/98804292-39f0-488d-a829-f43c5bb415e5
 
-| val 44 · Retro dance | val 114 · Pickaxe strikes |
-|:--:|:--:|
-| [![Retro dance](docs/media/val_44.jpg)](docs/media/val_44.mp4) | [![Pickaxe strikes](docs/media/val_114.jpg)](docs/media/val_114.mp4) |
+### val 17 · Lateral dance
+
+https://github.com/user-attachments/assets/0a794947-1b7b-4c1c-8d8e-027eee0adbf3
+
+### val 26 · Backward jump
+
+https://github.com/user-attachments/assets/39655761-973b-4621-8d7d-608af9a1ce64
+
+### val 41 · Balletic turn
+
+https://github.com/user-attachments/assets/acf1fa92-a77a-486c-8158-f8da71516714
+
+### val 44 · Retro dance
+
+https://github.com/user-attachments/assets/d5c995c7-f4d2-4588-9480-719d0f22f8c3
+
+### val 114 · Pickaxe strikes
+
+https://github.com/user-attachments/assets/3c47440c-7b8d-41a5-8249-4109e67e7e0e
 
 Across **all 128 validation clips**, this visualization protocol gives **0.1128 rad** mean per-clip joint RMSE and **0.2046 m** mean per-clip root-position RMSE, with **128/128** clips not crossing the height/tilt failure thresholds. Completion does not imply perfect tracking. The six displayed examples were selected by the project owner for presentation and do not replace the full-split evaluation. The zero-initial-velocity visualization protocol differs from the native reward benchmark below.
 

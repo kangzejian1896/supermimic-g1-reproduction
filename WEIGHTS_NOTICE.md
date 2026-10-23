@@ -1,7 +1,7 @@
 # Weight release terms — authorization confirmed; license text pending
 
 The source-code MIT license does not grant a license to the prepared model weights.
-These local artifacts are release candidates; no public weight upload has been performed.
+These artifacts are release candidates. Distribution authorization has been confirmed; the publisher has not yet supplied the specific downstream weight license text. The code license does not fill that gap.
 The publisher confirmed on 2026-10-23 that authorization covering public model-weight distribution is already in place and will supply the applicable terms. The exact license text/identifier remains to be inserted. No unconditional MIT/Apache/CC weight license is inferred by this preparation.
 
 Training data includes [Motion Data by Bones Studio](https://bones.studio/). Use of the underlying dataset is subject to the BONES Motion Capture Dataset License Agreement.

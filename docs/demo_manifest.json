@@ -38,7 +38,8 @@
         "duration_s": 6.44
       },
       "video_sha256": "c5992e11f9b47a7afb50c4949fe30a45201690d60d099347c3945ff99b697401",
-      "video_bytes": 978443
+      "video_bytes": 978443,
+      "github_video_url": "https://github.com/user-attachments/assets/98804292-39f0-488d-a829-f43c5bb415e5"
     },
     {
       "index": 17,
@@ -55,7 +56,8 @@
         "duration_s": 10.1
       },
       "video_sha256": "96739d732c7e4f9471b22754bc40882b11124e3c49cd0c8782ab4ee6cb5a693a",
-      "video_bytes": 1985272
+      "video_bytes": 1985272,
+      "github_video_url": "https://github.com/user-attachments/assets/0a794947-1b7b-4c1c-8d8e-027eee0adbf3"
     },
     {
       "index": 26,
@@ -72,7 +74,8 @@
         "duration_s": 4.04
       },
       "video_sha256": "510fdf7d70448f6479ffd5b0402431a0ab12830bca56c6989f8ccde643ebc896",
-      "video_bytes": 562871
+      "video_bytes": 562871,
+      "github_video_url": "https://github.com/user-attachments/assets/39655761-973b-4621-8d7d-608af9a1ce64"
     },
     {
       "index": 41,
@@ -89,7 +92,8 @@
         "duration_s": 4.14
       },
       "video_sha256": "b3d4a8975a6af148d231d77b74277b972ca65c06c034de4edf64d39ba813bbd4",
-      "video_bytes": 760845
+      "video_bytes": 760845,
+      "github_video_url": "https://github.com/user-attachments/assets/acf1fa92-a77a-486c-8158-f8da71516714"
     },
     {
       "index": 44,
@@ -106,7 +110,8 @@
         "duration_s": 3.34
       },
       "video_sha256": "3cd54cc49707c6e2abcc869765da6d649aa1ec357165d0dcc6006a28f5f11bac",
-      "video_bytes": 657046
+      "video_bytes": 657046,
+      "github_video_url": "https://github.com/user-attachments/assets/d5c995c7-f4d2-4588-9480-719d0f22f8c3"
     },
     {
       "index": 114,
@@ -123,7 +128,8 @@
         "duration_s": 7.44
       },
       "video_sha256": "770d545940e8b9614052ebd6f0ed2e8b174e44426adf9b0b94a5821885de596b",
-      "video_bytes": 1231866
+      "video_bytes": 1231866,
+      "github_video_url": "https://github.com/user-attachments/assets/3c47440c-7b8d-41a5-8249-4109e67e7e0e"
     }
   ]
 }
