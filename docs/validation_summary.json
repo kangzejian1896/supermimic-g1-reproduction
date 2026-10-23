@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-23",
+  "dependencies": "existing validated runtime; clean uv sync not verified",
+  "source_pytest": {
+    "passed": 11,
+    "skipped": 17
+  },
+  "final_wheel_pytest": {
+    "passed": 12,
+    "skipped": 17,
+    "package_source": "built wheel, via isolated import directory"
+  },
+  "weight_exports": {
+    "count": 3,
+    "restricted_loader": true,
+    "policy_output_max_abs_diff": 0.0
+  },
+  "runtime_smoke": {
+    "real_mujoco_warp": true,
+    "environments": 8,
+    "optimizer_updates": 4,
+    "initialized_from_models": true,
+    "finite_parameters": true,
+    "atomic_checkpoint": true
+  },
+  "released_policy_validation": {
+    "clips": 128,
+    "failed": 0,
+    "mean_norm_return": 0.8814749116170852
+  },
+  "wheel_build": {
+    "success": true,
+    "build_isolation": true,
+    "dependencies_installed_into_training_environment": false
+  },
+  "limitations": [
+    "No clean-machine full dependency installation",
+    "No real robot validation",
+    "No original-paper full dataset reproduction",
+    "Weight distribution license not finalized"
+  ],
+  "weight_distribution_authorization": "Confirmed by publisher on 2026-10-23; specific license text will be supplied"
+}

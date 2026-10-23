@@ -1,0 +1,129 @@
+{
+  "iteration": 44000,
+  "checkpoint": "ckpt_0044000.pt",
+  "checkpoint_sha256": "d7d65db78a165b42656a4b019f6c9433d0b0036b613a7b4f99ba71ef0a001be4",
+  "training": {
+    "gpus": 1,
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "logged_hours": 6.82,
+    "training_clips": 84287,
+    "training_frames_at_50hz": 30619722,
+    "training_motion_hours": 170.11,
+    "validation_clips": 128,
+    "seed": 42,
+    "parallel_environments": 4096,
+    "excludes": "Additional evaluation and rendering GPU time"
+  },
+  "selection": "Six validation examples selected by the project owner for presentation, not a random or exhaustive evaluation sample.",
+  "protocol": "Reference-conditioned tracking; identical GT initial pose and zero initial velocity; full reference horizon without resets; 25 fps video, 50 Hz control; shared camera; no post-alignment.",
+  "aggregate_validation": {
+    "clips": 128,
+    "completed": 128,
+    "joint_rmse_rad": 0.1128169156727381,
+    "root_distance_rmse_m": 0.20462157417932758
+  },
+  "cases": [
+    {
+      "index": 8,
+      "title": "Side stretch",
+      "description": "character stands with wide feet and stretches the body by moving the right hand over the left side of the head",
+      "video": "media/val_08.mp4",
+      "poster": "media/val_08.jpg",
+      "metrics": {
+        "index": 8,
+        "joint_rmse_rad": 0.1263687163591385,
+        "root_distance_rmse_m": 0.07836274057626724,
+        "completed": true,
+        "first_failure_s": null,
+        "duration_s": 6.44
+      },
+      "video_sha256": "c5992e11f9b47a7afb50c4949fe30a45201690d60d099347c3945ff99b697401",
+      "video_bytes": 978443
+    },
+    {
+      "index": 17,
+      "title": "Lateral dance",
+      "description": "dancer takes four steps to the left while waving their body and raising their right hand",
+      "video": "media/val_17.mp4",
+      "poster": "media/val_17.jpg",
+      "metrics": {
+        "index": 17,
+        "joint_rmse_rad": 0.14714616537094116,
+        "root_distance_rmse_m": 0.20421698689460754,
+        "completed": true,
+        "first_failure_s": null,
+        "duration_s": 10.1
+      },
+      "video_sha256": "96739d732c7e4f9471b22754bc40882b11124e3c49cd0c8782ab4ee6cb5a693a",
+      "video_bytes": 1985272
+    },
+    {
+      "index": 26,
+      "title": "Backward jump",
+      "description": "jumping back, landing on the right foot",
+      "video": "media/val_26.mp4",
+      "poster": "media/val_26.jpg",
+      "metrics": {
+        "index": 26,
+        "joint_rmse_rad": 0.09010916203260422,
+        "root_distance_rmse_m": 0.0880756601691246,
+        "completed": true,
+        "first_failure_s": null,
+        "duration_s": 4.04
+      },
+      "video_sha256": "510fdf7d70448f6479ffd5b0402431a0ab12830bca56c6989f8ccde643ebc896",
+      "video_bytes": 562871
+    },
+    {
+      "index": 41,
+      "title": "Balletic turn",
+      "description": "a balletic turn backwards over the right shoulder while joining the feet, move backwards",
+      "video": "media/val_41.mp4",
+      "poster": "media/val_41.jpg",
+      "metrics": {
+        "index": 41,
+        "joint_rmse_rad": 0.13533855974674225,
+        "root_distance_rmse_m": 0.3327920436859131,
+        "completed": true,
+        "first_failure_s": null,
+        "duration_s": 4.14
+      },
+      "video_sha256": "b3d4a8975a6af148d231d77b74277b972ca65c06c034de4edf64d39ba813bbd4",
+      "video_bytes": 760845
+    },
+    {
+      "index": 44,
+      "title": "Retro dance",
+      "description": "the individual is performing quick, retro dance steps with alternating upward and downward arm movements",
+      "video": "media/val_44.mp4",
+      "poster": "media/val_44.jpg",
+      "metrics": {
+        "index": 44,
+        "joint_rmse_rad": 0.1286459118127823,
+        "root_distance_rmse_m": 0.07992809265851974,
+        "completed": true,
+        "first_failure_s": null,
+        "duration_s": 3.34
+      },
+      "video_sha256": "3cd54cc49707c6e2abcc869765da6d649aa1ec357165d0dcc6006a28f5f11bac",
+      "video_bytes": 657046
+    },
+    {
+      "index": 114,
+      "title": "Pickaxe strikes",
+      "description": "commence side sledgehammering using three strikes with a pickaxe",
+      "video": "media/val_114.mp4",
+      "poster": "media/val_114.jpg",
+      "metrics": {
+        "index": 114,
+        "joint_rmse_rad": 0.15354986488819122,
+        "root_distance_rmse_m": 0.06421026587486267,
+        "completed": true,
+        "first_failure_s": null,
+        "duration_s": 7.44
+      },
+      "video_sha256": "770d545940e8b9614052ebd6f0ed2e8b174e44426adf9b0b94a5821885de596b",
+      "video_bytes": 1231866
+    }
+  ]
+}

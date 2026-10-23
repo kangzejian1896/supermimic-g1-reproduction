@@ -1,0 +1,20 @@
+{
+  "full_train": {
+    "clips": 84287,
+    "failed": 58,
+    "mean_norm_return": 0.9090589720449442,
+    "frame_weighted_full_episode_return": 0.9017650005756922,
+    "normalization": "full reference duration; zero remaining reward after early termination (paper Sec.4)",
+    "clip_completion_rate": 0.9993118749036032
+  },
+  "val": {
+    "clips": 128,
+    "failed": 0,
+    "mean_norm_return": 0.881119501755635,
+    "frame_weighted_full_episode_return": 0.8803598395124466,
+    "normalization": "full reference duration; zero remaining reward after early termination (paper Sec.4)",
+    "clip_completion_rate": 1.0
+  },
+  "checkpoint": "supermimic_g1_036000_policy.pt",
+  "protocol": "native deterministic full-reference benchmark; not visualization RMSE"
+}

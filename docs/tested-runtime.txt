@@ -1,0 +1,7 @@
+mujoco==3.16.0
+mujoco-warp==3.16.0
+numpy==2.5.4
+scipy==1.18.1
+tensorboard==2.21.0
+tyro==1.0.16
+mjlab git revision: 8bb2bc9e187797689ec82c78c35019afd2fd0376

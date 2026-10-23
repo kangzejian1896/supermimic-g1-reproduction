@@ -1,0 +1,222 @@
+{
+  "run_name": "paper_protocol_seed42",
+  "log_root": "logs",
+  "seed": 42,
+  "device": "cuda:0",
+  "data": {
+    "npz_dir": "data/npz/train",
+    "clips": null,
+    "limit": null,
+    "manifest": null,
+    "library": "data/library/train.pt"
+  },
+  "env": {
+    "paper_protocol": true,
+    "num_envs": 4096,
+    "episode_length_s": 10.0,
+    "action_noise_std": 0.1,
+    "obs_noise": true,
+    "reset_noise": true,
+    "domain_randomization": true,
+    "sampling_mode": "return",
+    "replay_capacity": 1000,
+    "future_frames": 10,
+    "compact_library": false,
+    "anchor_obs": false
+  },
+  "world_model": {
+    "hidden": [
+      2048,
+      2048,
+      2048
+    ],
+    "term_hidden": [
+      64,
+      64
+    ],
+    "state_spec": {
+      "dt": 0.02,
+      "err_scale": [
+        0.05,
+        0.1,
+        0.5,
+        1.0,
+        0.1,
+        2.0
+      ],
+      "out_scale": [
+        0.3,
+        0.5,
+        2.0,
+        0.01,
+        0.02,
+        0.02
+      ],
+      "in_scale": [
+        1.0,
+        1.0,
+        1.0,
+        2.0,
+        1.0,
+        5.0
+      ],
+      "explicit_integration": true,
+      "xi_offset": [
+        0.75,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xi_scale": [
+        0.45,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.05,
+        0.05,
+        0.05
+      ]
+    },
+    "term_loss_weight": 1.0,
+    "height_threshold": 0.25,
+    "tilt_threshold": 0.8
+  },
+  "wm_trainer": {
+    "window": 8,
+    "batches_per_update": 10,
+    "batch_size": 2048,
+    "lr": 0.0002,
+    "grad_clip": 1.0,
+    "weight_decay": 0.0,
+    "compile": "default"
+  },
+  "policy": {
+    "encoder_hidden": [
+      2048,
+      1024,
+      512,
+      256
+    ],
+    "decoder_hidden": [
+      2048,
+      1024,
+      512,
+      256
+    ],
+    "latent_dim": 32,
+    "history": 10,
+    "obs_term_scale": [
+      1.0,
+      5.0,
+      2.0,
+      1.0,
+      1.0
+    ],
+    "goal_term_scale": [
+      1.0,
+      5.0,
+      1.0,
+      2.0,
+      1.0,
+      1.0
+    ],
+    "decoder_last_gain": 0.01,
+    "goal_dim": 680
+  },
+  "critic": {
+    "hidden": [
+      256,
+      128
+    ]
+  },
+  "policy_trainer": {
+    "horizon": 32,
+    "batch_size": 4096,
+    "history": 10,
+    "future_frames": 10,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "lr": 0.0002,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "grad_clip_norm": 1.0,
+    "grad_clip_value": 0.1,
+    "critic_lr": 0.0002,
+    "critic_grad_clip": 1.0,
+    "critic_epochs": 5,
+    "critic_minibatches": 4,
+    "use_critic": true,
+    "obs_noise": true,
+    "compile": "default",
+    "anchor_obs": false
+  },
+  "schedule": {
+    "total_iterations": 320000,
+    "updates_per_env_step": 0.4,
+    "policy_updates_per_wm_update": 1,
+    "warmup_iterations": 40,
+    "lr_final_ratio": 0.03,
+    "lr_decay_fraction": 0.78125,
+    "log_interval": 50,
+    "checkpoint_interval": 4000,
+    "max_hours": null
+  },
+  "resume": null
+}
