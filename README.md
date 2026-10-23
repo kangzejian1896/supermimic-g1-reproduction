@@ -1,3 +1,27 @@
+
+
+https://github.com/user-attachments/assets/3c47440c-7b8d-41a5-8249-4109e67e7e0e
+
+
+
+https://github.com/user-attachments/assets/d5c995c7-f4d2-4588-9480-719d0f22f8c3
+
+
+
+https://github.com/user-attachments/assets/acf1fa92-a77a-486c-8158-f8da71516714
+
+
+
+https://github.com/user-attachments/assets/39655761-973b-4621-8d7d-608af9a1ce64
+
+
+
+https://github.com/user-attachments/assets/0a794947-1b7b-4c1c-8d8e-027eee0adbf3
+
+
+
+https://github.com/user-attachments/assets/98804292-39f0-488d-a829-f43c5bb415e5
+
 # SuperMimic G1
 
 **Independent reproduction · Differentiable world-model control · MuJoCo Warp**
