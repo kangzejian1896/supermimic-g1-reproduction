@@ -30,27 +30,27 @@ The [local gallery](docs/index.html) includes the full video and the six owner-s
 
 ### val 08 · Side stretch
 
-[![Play val 08](docs/media/val_08.jpg)](docs/media/val_08.mp4)
+https://github.com/user-attachments/assets/e8509f55-8d6e-48cf-93cc-823332d6c34a
 
 ### val 17 · Lateral dance
 
-[![Play val 17](docs/media/val_17.jpg)](docs/media/val_17.mp4)
+https://github.com/user-attachments/assets/1f57f030-c5dc-40fa-ad75-af8fe15164d4
 
 ### val 26 · Backward jump
 
-[![Play val 26](docs/media/val_26.jpg)](docs/media/val_26.mp4)
+https://github.com/user-attachments/assets/f58d8bd4-ee9c-4e9a-a988-ee374a9b876f
 
 ### val 41 · Balletic turn
 
-[![Play val 41](docs/media/val_41.jpg)](docs/media/val_41.mp4)
+https://github.com/user-attachments/assets/f4fe4f2d-40e1-4f89-83b3-6e38b8e1c5f1
 
 ### val 44 · Retro dance
 
-[![Play val 44](docs/media/val_44.jpg)](docs/media/val_44.mp4)
+https://github.com/user-attachments/assets/e82697b0-f025-45fa-88d9-be7c4d6bf1a5
 
 ### val 114 · Pickaxe strikes
 
-[![Play val 114](docs/media/val_114.jpg)](docs/media/val_114.mp4)
+https://github.com/user-attachments/assets/d39ea2f0-4498-4d8e-987a-8b272e00e72d
 
 ### Same-protocol validation comparison
 

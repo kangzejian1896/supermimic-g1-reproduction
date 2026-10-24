@@ -38,7 +38,8 @@
         "duration_s": 6.44
       },
       "video_sha256": "cb33c90669a7f8f7b3186b1d98e519b3be2477e71884db75da5d6675d1ef234a",
-      "video_bytes": 1129202
+      "video_bytes": 1129202,
+      "github_video_url": "https://github.com/user-attachments/assets/e8509f55-8d6e-48cf-93cc-823332d6c34a"
     },
     {
       "index": 17,
@@ -55,7 +56,8 @@
         "duration_s": 10.1
       },
       "video_sha256": "44285979ba386f2b3babfa3138087c51121b245c2b2578dfc2eb383c38a12465",
-      "video_bytes": 2292390
+      "video_bytes": 2292390,
+      "github_video_url": "https://github.com/user-attachments/assets/1f57f030-c5dc-40fa-ad75-af8fe15164d4"
     },
     {
       "index": 26,
@@ -72,7 +74,8 @@
         "duration_s": 4.04
       },
       "video_sha256": "367e764dfe6de55944440c79eebf6a402e77f60f0f26f6620905819bbb7d5244",
-      "video_bytes": 637622
+      "video_bytes": 637622,
+      "github_video_url": "https://github.com/user-attachments/assets/f58d8bd4-ee9c-4e9a-a988-ee374a9b876f"
     },
     {
       "index": 41,
@@ -89,7 +92,8 @@
         "duration_s": 4.14
       },
       "video_sha256": "c1587471b417631fe12e10798f098e4816708eb9c261e70152dc846973ecd6e9",
-      "video_bytes": 866013
+      "video_bytes": 866013,
+      "github_video_url": "https://github.com/user-attachments/assets/f4fe4f2d-40e1-4f89-83b3-6e38b8e1c5f1"
     },
     {
       "index": 44,
@@ -106,7 +110,8 @@
         "duration_s": 3.34
       },
       "video_sha256": "962d336c39bc3be7dbc23e5dec83adf26b139d97fe7d1f3a328ca10c616af2ee",
-      "video_bytes": 758286
+      "video_bytes": 758286,
+      "github_video_url": "https://github.com/user-attachments/assets/e82697b0-f025-45fa-88d9-be7c4d6bf1a5"
     },
     {
       "index": 114,
@@ -123,7 +128,8 @@
         "duration_s": 7.44
       },
       "video_sha256": "9db1c0d40bb53b53cc8711605391b1f31b5716520450195480066ea274a5ae32",
-      "video_bytes": 1408620
+      "video_bytes": 1408620,
+      "github_video_url": "https://github.com/user-attachments/assets/d39ea2f0-4498-4d8e-987a-8b272e00e72d"
     }
   ],
   "checkpoint_selection": {
