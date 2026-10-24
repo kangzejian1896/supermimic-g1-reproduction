@@ -1,0 +1,23 @@
+{
+  "file": "supermimic_g1_168000_policy.pt",
+  "sha256": "7d8e9536ae58251911f4c2b5d464c8f573cb4eb9e9b51d1cafd79786b4993ef3",
+  "bytes": 35582289,
+  "iteration": 168000,
+  "contents": [
+    "policy"
+  ],
+  "restricted_load_verified": true,
+  "policy_output_max_abs_diff": 0.0,
+  "source_checkpoint_sha256": "cd3ebeff82d5fab88a6e9ec5bd29d052969d102cb98c34b46e05337e0b242c00",
+  "tensors": {
+    "policy": 8892807
+  },
+  "excluded": [
+    "optimizer states",
+    "replay",
+    "per-motion sampling statistics",
+    "motion data",
+    "internal filesystem paths"
+  ],
+  "weight_license": "See WEIGHTS_NOTICE.md; not covered by the code MIT license"
+}

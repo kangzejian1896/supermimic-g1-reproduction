@@ -1,0 +1,23 @@
+{
+  "protocol": "same 128 full references, zero initial velocity, no reset after failure",
+  "baseline_iteration": 32000,
+  "current_iteration": 168000,
+  "metrics": {
+    "completed": {
+      "32k": 128,
+      "168k": 128
+    },
+    "clips": {
+      "32k": 128,
+      "168k": 128
+    },
+    "joint_rmse_rad": {
+      "32k": 0.1270575930539053,
+      "168k": 0.08822066168067977
+    },
+    "root_distance_rmse_m": {
+      "32k": 0.21378016505695996,
+      "168k": 0.13117169232282322
+    }
+  }
+}

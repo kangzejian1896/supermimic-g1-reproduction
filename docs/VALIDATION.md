@@ -1,3 +1,7 @@
+# 168k release checks · 2026-10-24
+
+Both 168k exports passed restricted loading, finite-tensor checks and exact policy-output parity (maximum absolute difference 0). Six demo MP4s and the 24-example combined video decoded completely without errors. The combined video retains 5,122 frames at 25 fps (204.88 seconds). File hashes are in SHA256SUMS_168k; export manifests record source and output hashes. Source audit passed. This update changes model artifacts and documentation, not training code.
+
 # Release validation
 
 Checked on 2026-10-23 with the release source selected explicitly ahead of the original editable installation, using its existing validated dependencies. A clean `uv sync` from an empty machine has not been completed; do not treat runtime reuse as a fresh-install certification.

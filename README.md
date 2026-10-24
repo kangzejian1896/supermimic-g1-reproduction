@@ -6,53 +6,62 @@ A reference-motion-conditioned whole-body controller for Unitree G1, using a lea
 
 This is an independent reproduction **derived from [CuboiLeo/SuperMimic-Reproduced](https://github.com/CuboiLeo/SuperMimic-Reproduced), commit `d9be385b3eeb13a638fb33fb200d3bfd9be9839f`**. It is not the authors' official implementation. The original work is [SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model](https://arxiv.org/abs/2610.28480) ([project](https://supermimic.github.io/)).
 
-**Release state:** source code and six 44k validation demos are provided in this repository. Sanitized 32k/36k weights are available in [v0.1.0-rc1](https://github.com/kangzejian1896/supermimic-g1-reproduction/releases/tag/v0.1.0-rc1). Code is MIT; weight distribution authorization is confirmed by the publisher; the separate weight license text is pending. See [WEIGHTS_NOTICE.md](WEIGHTS_NOTICE.md).
+**Release state:** matching **168k weights and demos** are available in [v0.2.0-168k](https://github.com/kangzejian1896/supermimic-g1-reproduction/releases/tag/v0.2.0-168k). The checkpoint was selected by the best mean native validation return among completed evaluations through 172k on 2026-10-24. Code is MIT; weight distribution authorization is confirmed by the publisher; separate weight terms remain pending. See [WEIGHTS_NOTICE.md](WEIGHTS_NOTICE.md).
 
-[44k validation demos](#validation-demos--44k) · [Model card](docs/MODEL_CARD.md) · [Paper alignment](docs/PAPER_ALIGNMENT.md) · [Data format](docs/DATA.md) · [Validation](docs/VALIDATION.md)
+[24-example comparison video](docs/media/reference_supermimic_168000_all.mp4) · [Demo gallery](docs/index.html) · [Model card](docs/MODEL_CARD.md) · [Paper alignment](docs/PAPER_ALIGNMENT.md) · [Data format](docs/DATA.md)
 
 ## Training at a glance
 
-| Demo checkpoint | Training GPU | Training data | Time to checkpoint |
+| Checkpoint | Training GPU | Training data | Time to checkpoint |
 |:--|:--|:--|:--|
-| **44,000 iterations** · seed 42 | **1 × NVIDIA A800-SXM4-80GB** | **84,287 clips · 170.11 motion hours** | **6.82 hours ≈ 6 h 49 min** |
+| **168,000 iterations** · seed 42 | **1 × NVIDIA A800-SXM4-80GB** | **84,287 clips · 170.11 motion hours** | **25.86 hours ≈ 25 h 52 min** |
 
-The full processed **BONES-SEED datav5 training split** contains 30,619,722 frames at 50 Hz. Training uses 4,096 parallel environments; **128 held-out validation clips** are used for evaluation. The GPU has 80GB capacity; observed training allocation was about 24GB. Time is the training loop's logged elapsed time at iteration 44,000, excluding additional evaluation and rendering GPU time. This is an intermediate checkpoint of a 320k schedule, not the completed schedule.
+The processed BONES-SEED datav5 train split contains **30,619,722 frames at 50 Hz**. Training uses **4,096 parallel environments**, with about **24 GB observed GPU allocation**. The **128 held-out validation clips** are also used for checkpoint selection; no final test result is claimed. Logged training time excludes additional evaluation/rendering GPU time. This is an intermediate checkpoint of a 320k schedule.
 
-## Validation demos · 44k
+## Validation demos · 168k
 
-**Left: kinematic reference. Right: actual SuperMimic MuJoCo Warp rollout.** All six videos below use the **44k** checkpoint, with a shared camera and timeline, full motion duration and on-screen errors. These are reference-conditioned control results; the text describes the motion and is not a policy input.
+**Left: kinematic reference. Right: actual SuperMimic MuJoCo Warp rollout.** The released weights match these videos. Shared camera, original speed, full duration, identical initial pose and zero initial velocity. Reference-conditioned tracking: the displayed text is a motion label, not a policy input.
 
-Play the six videos directly below. The repository also includes a [local six-video gallery](docs/index.html) with speed controls: run `python3 -m http.server 8000` from the repository root and open `http://localhost:8000/docs/`.
+[![Play the 24-example comparison](docs/media/val_08.jpg)](docs/media/reference_supermimic_168000_all.mp4)
+
+**[Play / download the full video — 24 validation examples, 3 min 25 s](docs/media/reference_supermimic_168000_all.mp4)**
+
+The [local gallery](docs/index.html) includes the full video and the six owner-selected examples below. Run `python3 -m http.server 8000` from the repository root and open `http://localhost:8000/docs/`.
 
 ### val 08 · Side stretch
 
-https://github.com/user-attachments/assets/98804292-39f0-488d-a829-f43c5bb415e5
+[![Play val 08](docs/media/val_08.jpg)](docs/media/val_08.mp4)
 
 ### val 17 · Lateral dance
 
-https://github.com/user-attachments/assets/0a794947-1b7b-4c1c-8d8e-027eee0adbf3
+[![Play val 17](docs/media/val_17.jpg)](docs/media/val_17.mp4)
 
 ### val 26 · Backward jump
 
-https://github.com/user-attachments/assets/39655761-973b-4621-8d7d-608af9a1ce64
+[![Play val 26](docs/media/val_26.jpg)](docs/media/val_26.mp4)
 
 ### val 41 · Balletic turn
 
-https://github.com/user-attachments/assets/acf1fa92-a77a-486c-8158-f8da71516714
+[![Play val 41](docs/media/val_41.jpg)](docs/media/val_41.mp4)
 
 ### val 44 · Retro dance
 
-https://github.com/user-attachments/assets/d5c995c7-f4d2-4588-9480-719d0f22f8c3
+[![Play val 44](docs/media/val_44.jpg)](docs/media/val_44.mp4)
 
 ### val 114 · Pickaxe strikes
 
-https://github.com/user-attachments/assets/3c47440c-7b8d-41a5-8249-4109e67e7e0e
+[![Play val 114](docs/media/val_114.jpg)](docs/media/val_114.mp4)
 
-Across **all 128 validation clips**, this visualization protocol gives **0.1128 rad** mean per-clip joint RMSE and **0.2046 m** mean per-clip root-position RMSE, with **128/128** clips not crossing the height/tilt failure thresholds. Completion does not imply perfect tracking. The six displayed examples were selected by the project owner for presentation and do not replace the full-split evaluation. The zero-initial-velocity visualization protocol differs from the native reward benchmark below.
+### Same-protocol validation comparison
 
-[Demo protocol and checkpoint hash](docs/demo_manifest.json) · Motion Data by [Bones Studio](https://bones.studio/).
+| Checkpoint | Completed / 128 ↑ | Joint RMSE ↓ | Root-position RMSE ↓ |
+|:--|--:|--:|--:|
+| 32k | 128 | 0.1271 rad | 0.2138 m |
+| **168k** | **128** | **0.0882 rad** | **0.1312 m** |
 
-**Version note:** these demos are 44k; the currently prepared weight bundles below remain 32k/36k. They do not reproduce the 44k videos.
+Means are over all 128 full trajectories, including frames after failure. Joint error falls **30.6%**, root-position error **38.6%**. Completion uses height/tilt thresholds and does not imply perfect tracking. The visualization protocol differs from the native reward benchmark: **168k native mean return 0.9290**, versus **0.8854 at 32k**. Videos are fixed presentation examples, not a random evaluation sample.
+
+[Demo protocol and hashes](docs/demo_manifest.json) · [Native benchmark](docs/benchmark_168k.json) · Motion Data by [Bones Studio](https://bones.studio/).
 
 ## What is included
 
@@ -85,7 +94,7 @@ Generate a short, constant reference from the robot's home pose:
 uv run python scripts/data/make_synthetic_motion.py
 # Place the prepared release weights in weights/ first.
 CUDA_VISIBLE_DEVICES=0 MUJOCO_GL=egl uv run python scripts/eval_benchmark.py \
-  --ckpt weights/supermimic_g1_036000_policy.pt \
+  --ckpt weights/supermimic_g1_168000_policy.pt \
   --npz-dir data/npz/synthetic --num-envs 1 --out logs/synthetic_eval.json
 ```
 
@@ -93,7 +102,7 @@ This verifies the interface, not realistic tracking quality. To view motions you
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 uv run python scripts/play.py \
-  --ckpt weights/supermimic_g1_036000_policy.pt \
+  --ckpt weights/supermimic_g1_168000_policy.pt \
   --npz-dir data/npz/motions --num-envs 1 --viewer viser
 ```
 
@@ -119,7 +128,7 @@ To initialize a new training run from the released model tensors:
 ```bash
 CUDA_VISIBLE_DEVICES=0 bash scripts/train_paper.sh \
   --run-name g1_finetune --data.library data/library/train.pt \
-  --initialize-from weights/supermimic_g1_036000_models.pt
+  --initialize-from weights/supermimic_g1_168000_models.pt
 ```
 
 `--initialize-from` resets optimizer, replay/sampling state and iteration counters. It is different from `--resume`, which requires a complete private training checkpoint and a compatible dataset. Public exports deliberately omit optimizer state and per-motion sampling statistics.
@@ -128,27 +137,27 @@ CUDA_VISIBLE_DEVICES=0 bash scripts/train_paper.sh \
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 MUJOCO_GL=egl uv run python scripts/eval_benchmark.py \
-  --ckpt weights/supermimic_g1_036000_policy.pt \
+  --ckpt weights/supermimic_g1_168000_policy.pt \
   --npz-dir data/npz/val --num-envs 128 --out logs/val.json
 # Packed libraries are also supported; one .pt can contain many motions.
 CUDA_VISIBLE_DEVICES=1 MUJOCO_GL=egl uv run python scripts/eval_benchmark.py \
-  --ckpt weights/supermimic_g1_036000_policy.pt \
+  --ckpt weights/supermimic_g1_168000_policy.pt \
   --library data/library/train.pt --num-envs 1024 --out logs/train_eval.json
 ```
 
 Evaluate immutable numbered checkpoints on a separate GPU if training is running. `sm-train` saves checkpoints but does not automatically launch benchmark jobs. The benchmark uses the full reference horizon as the denominator in `paper_protocol`; early failure earns zero reward for the remaining duration. Legacy executed-step normalization is retained separately for diagnostics.
 
-## Prepared checkpoints
+## Model downloads
+
+Download [v0.2.0-168k](https://github.com/kangzejian1896/supermimic-g1-reproduction/releases/tag/v0.2.0-168k) assets and verify `SHA256SUMS_168k`:
 
 | Artifact | Contents | Purpose |
 |---|---|---|
-| `supermimic_g1_036000_policy.pt` | Policy + portable config | Inference, 36k candidate |
-| `supermimic_g1_036000_models.pt` | Policy, world model, critic + config | Model-only training initialization |
-| `supermimic_g1_032000_policy.pt` | Policy + portable config | Matches the public 32k video demo |
+| `supermimic_g1_168000_policy.pt` | Policy + portable config | Inference matching current demos |
+| `supermimic_g1_168000_models.pt` | Policy, world model, critic + config | Model-only training initialization |
+| `reference_supermimic_168000_all.mp4` | 24 full-length validation examples | Ref / control comparison |
 
-Download the [32k/36k weights and checksums](https://github.com/kangzejian1896/supermimic-g1-reproduction/releases/tag/v0.1.0-rc1) from the candidate release. Weights are packaged separately from the Git source; see [weights/README.md](weights/README.md). No raw data, replay, text annotations, optimizer states, per-motion scores, or internal filesystem paths are included in these exports. SHA256 files accompany the prepared artifacts. PyTorch restricted loading (`weights_only=True`) is verified.
-
-The 36k checkpoint's existing native benchmark: **0 failures / 128 validation clips, mean normalized return 0.8811**; **58 failures / 84,287 training clips, return 0.9091**. Training-set coverage is not generalization. This uses our processed datav5 split, not the original paper's full dataset/filtering. The public 32k demo uses a different zero-initial-velocity visualization protocol; its RMSE must not be equated to native benchmark return. See the model card for limitations.
+Put model files in `weights/`. Restricted loading (`weights_only=True`) and identical policy outputs after export are verified. Optimizer states, replay, per-motion scores, raw motion data and internal filesystem paths are excluded. Use `--initialize-from` with the models export; exact optimizer resumption is not supported. Older 32k/36k assets remain in v0.1.0-rc1.
 
 ## Attribution and licenses
 

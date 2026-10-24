@@ -12,10 +12,11 @@ for p in root.rglob('*'):
     if any(part in ignored for part in p.relative_to(root).parts) or not p.is_file():
         continue
     rel = p.relative_to(root)
-    if rel.parent == Path('docs/media') and rel.name in demo_names and not p.is_symlink():
+    is_combined = rel == Path('docs/media/reference_supermimic_168000_all.mp4')
+    if rel.parent == Path('docs/media') and (rel.name in demo_names or is_combined) and not p.is_symlink():
         header = p.read_bytes()[:12]
         valid = (p.suffix == '.mp4' and header[4:8] == b'ftyp') or (p.suffix == '.jpg' and header[:3] == b'\xff\xd8\xff')
-        if not valid or p.stat().st_size > 10*1024*1024:
+        if not valid or p.stat().st_size > (50 if is_combined else 10)*1024*1024:
             violations.append(str(rel))
         continue
     if p.is_symlink() or p.stat().st_size > 2*1024*1024:

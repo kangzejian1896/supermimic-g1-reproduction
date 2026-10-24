@@ -1,11 +1,11 @@
 {
-  "iteration": 44000,
-  "checkpoint": "ckpt_0044000.pt",
-  "checkpoint_sha256": "d7d65db78a165b42656a4b019f6c9433d0b0036b613a7b4f99ba71ef0a001be4",
+  "iteration": 168000,
+  "checkpoint": "ckpt_0168000.pt",
+  "checkpoint_sha256": "cd3ebeff82d5fab88a6e9ec5bd29d052969d102cb98c34b46e05337e0b242c00",
   "training": {
     "gpus": 1,
     "gpu": "NVIDIA A800-SXM4-80GB",
-    "logged_hours": 6.82,
+    "logged_hours": 25.86,
     "training_clips": 84287,
     "training_frames_at_50hz": 30619722,
     "training_motion_hours": 170.11,
@@ -19,8 +19,8 @@
   "aggregate_validation": {
     "clips": 128,
     "completed": 128,
-    "joint_rmse_rad": 0.1128169156727381,
-    "root_distance_rmse_m": 0.20462157417932758
+    "joint_rmse_rad": 0.08822066168067977,
+    "root_distance_rmse_m": 0.13117169232282322
   },
   "cases": [
     {
@@ -31,15 +31,14 @@
       "poster": "media/val_08.jpg",
       "metrics": {
         "index": 8,
-        "joint_rmse_rad": 0.1263687163591385,
-        "root_distance_rmse_m": 0.07836274057626724,
+        "joint_rmse_rad": 0.07939872145652771,
+        "root_distance_rmse_m": 0.026348164305090904,
         "completed": true,
         "first_failure_s": null,
         "duration_s": 6.44
       },
-      "video_sha256": "c5992e11f9b47a7afb50c4949fe30a45201690d60d099347c3945ff99b697401",
-      "video_bytes": 978443,
-      "github_video_url": "https://github.com/user-attachments/assets/98804292-39f0-488d-a829-f43c5bb415e5"
+      "video_sha256": "cb33c90669a7f8f7b3186b1d98e519b3be2477e71884db75da5d6675d1ef234a",
+      "video_bytes": 1129202
     },
     {
       "index": 17,
@@ -49,15 +48,14 @@
       "poster": "media/val_17.jpg",
       "metrics": {
         "index": 17,
-        "joint_rmse_rad": 0.14714616537094116,
-        "root_distance_rmse_m": 0.20421698689460754,
+        "joint_rmse_rad": 0.10421019047498703,
+        "root_distance_rmse_m": 0.21483436226844788,
         "completed": true,
         "first_failure_s": null,
         "duration_s": 10.1
       },
-      "video_sha256": "96739d732c7e4f9471b22754bc40882b11124e3c49cd0c8782ab4ee6cb5a693a",
-      "video_bytes": 1985272,
-      "github_video_url": "https://github.com/user-attachments/assets/0a794947-1b7b-4c1c-8d8e-027eee0adbf3"
+      "video_sha256": "44285979ba386f2b3babfa3138087c51121b245c2b2578dfc2eb383c38a12465",
+      "video_bytes": 2292390
     },
     {
       "index": 26,
@@ -67,15 +65,14 @@
       "poster": "media/val_26.jpg",
       "metrics": {
         "index": 26,
-        "joint_rmse_rad": 0.09010916203260422,
-        "root_distance_rmse_m": 0.0880756601691246,
+        "joint_rmse_rad": 0.08161929994821548,
+        "root_distance_rmse_m": 0.05657906457781792,
         "completed": true,
         "first_failure_s": null,
         "duration_s": 4.04
       },
-      "video_sha256": "510fdf7d70448f6479ffd5b0402431a0ab12830bca56c6989f8ccde643ebc896",
-      "video_bytes": 562871,
-      "github_video_url": "https://github.com/user-attachments/assets/39655761-973b-4621-8d7d-608af9a1ce64"
+      "video_sha256": "367e764dfe6de55944440c79eebf6a402e77f60f0f26f6620905819bbb7d5244",
+      "video_bytes": 637622
     },
     {
       "index": 41,
@@ -85,15 +82,14 @@
       "poster": "media/val_41.jpg",
       "metrics": {
         "index": 41,
-        "joint_rmse_rad": 0.13533855974674225,
-        "root_distance_rmse_m": 0.3327920436859131,
+        "joint_rmse_rad": 0.09325407445430756,
+        "root_distance_rmse_m": 0.05111982300877571,
         "completed": true,
         "first_failure_s": null,
         "duration_s": 4.14
       },
-      "video_sha256": "b3d4a8975a6af148d231d77b74277b972ca65c06c034de4edf64d39ba813bbd4",
-      "video_bytes": 760845,
-      "github_video_url": "https://github.com/user-attachments/assets/acf1fa92-a77a-486c-8158-f8da71516714"
+      "video_sha256": "c1587471b417631fe12e10798f098e4816708eb9c261e70152dc846973ecd6e9",
+      "video_bytes": 866013
     },
     {
       "index": 44,
@@ -103,15 +99,14 @@
       "poster": "media/val_44.jpg",
       "metrics": {
         "index": 44,
-        "joint_rmse_rad": 0.1286459118127823,
-        "root_distance_rmse_m": 0.07992809265851974,
+        "joint_rmse_rad": 0.1010560542345047,
+        "root_distance_rmse_m": 0.08784132450819016,
         "completed": true,
         "first_failure_s": null,
         "duration_s": 3.34
       },
-      "video_sha256": "3cd54cc49707c6e2abcc869765da6d649aa1ec357165d0dcc6006a28f5f11bac",
-      "video_bytes": 657046,
-      "github_video_url": "https://github.com/user-attachments/assets/d5c995c7-f4d2-4588-9480-719d0f22f8c3"
+      "video_sha256": "962d336c39bc3be7dbc23e5dec83adf26b139d97fe7d1f3a328ca10c616af2ee",
+      "video_bytes": 758286
     },
     {
       "index": 114,
@@ -121,15 +116,53 @@
       "poster": "media/val_114.jpg",
       "metrics": {
         "index": 114,
-        "joint_rmse_rad": 0.15354986488819122,
-        "root_distance_rmse_m": 0.06421026587486267,
+        "joint_rmse_rad": 0.09842762351036072,
+        "root_distance_rmse_m": 0.04805948957800865,
         "completed": true,
         "first_failure_s": null,
         "duration_s": 7.44
       },
-      "video_sha256": "770d545940e8b9614052ebd6f0ed2e8b174e44426adf9b0b94a5821885de596b",
-      "video_bytes": 1231866,
-      "github_video_url": "https://github.com/user-attachments/assets/3c47440c-7b8d-41a5-8249-4109e67e7e0e"
+      "video_sha256": "9db1c0d40bb53b53cc8711605391b1f31b5716520450195480066ea274a5ae32",
+      "video_bytes": 1408620
     }
-  ]
+  ],
+  "checkpoint_selection": {
+    "criterion": "maximum mean_norm_return on 128 validation clips among completed evaluations",
+    "score": 0.9289721547086006,
+    "evaluation": "paper_protocol_datav5_seed42_ckpt_0168000_val_summary.json"
+  },
+  "combined_video": {
+    "file": "media/reference_supermimic_168000_all.mp4",
+    "cases": [
+      2,
+      3,
+      4,
+      8,
+      9,
+      12,
+      16,
+      17,
+      21,
+      24,
+      26,
+      30,
+      31,
+      41,
+      44,
+      46,
+      49,
+      60,
+      65,
+      76,
+      88,
+      89,
+      97,
+      114
+    ],
+    "duration_seconds": 204.88,
+    "frames": 5122,
+    "fps": 25,
+    "encoding": "H.264 CRF 23; full original timeline",
+    "sha256": "892427843f83b1cca03975b0bdca7dc715df7af7c58b64002500bacaaddcf4df"
+  }
 }

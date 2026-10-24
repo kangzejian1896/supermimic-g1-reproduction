@@ -1,0 +1,24 @@
+{
+  "val": {
+    "clips": 128,
+    "failed": 0,
+    "mean_norm_return": 0.9289721547086006,
+    "frame_weighted_full_episode_return": 0.9263317667381508,
+    "normalization": "full reference duration; zero remaining reward after early termination (paper Sec.4)",
+    "clip_completion_rate": 1.0
+  },
+  "full_train": {
+    "clips": 84287,
+    "failed": 9,
+    "mean_norm_return": 0.9442351607710937,
+    "frame_weighted_full_episode_return": 0.9384134911649589,
+    "normalization": "full reference duration; zero remaining reward after early termination (paper Sec.4)",
+    "clip_completion_rate": 0.9998932219678005
+  },
+  "checkpoint": "supermimic_g1_168000_policy.pt",
+  "selection": {
+    "criterion": "maximum mean_norm_return on 128 validation clips among completed evaluations",
+    "score": 0.9289721547086006,
+    "evaluation": "paper_protocol_datav5_seed42_ckpt_0168000_val_summary.json"
+  }
+}

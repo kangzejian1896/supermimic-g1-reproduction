@@ -4,10 +4,10 @@
 
 - Architecture: reference-conditioned G1 policy with a differentiable learned world model and critic.
 - Base implementation: CuboiLeo/SuperMimic-Reproduced, d9be385b3eeb13a638fb33fb200d3bfd9be9839f, with the changes in CHANGELOG.md.
-- Primary candidate: iteration 36,000; seed 42; 5.60 logged training hours on one A800 80GB. Evaluation uses additional GPU time and is excluded from that training figure.
-- Companion export: iteration 32,000, matching the earlier public demonstration, 4.98 logged training hours.
-- Current README demos: iteration 44,000; 6.82 logged training hours (about 6 h 49 min) on one NVIDIA A800-SXM4-80GB. Six owner-selected validation examples: 08, 17, 26, 41, 44, 114. These demos are newer than the prepared 32k/36k weight exports; see [demo_manifest.json](demo_manifest.json).
-- Prepared locally on 2026-10-23. This is an intermediate checkpoint, not a completed 320k schedule or an official paper release.
+- Current candidate: **iteration 168,000**, seed 42, **25.86 logged training hours on one NVIDIA A800-SXM4-80GB**. Additional evaluation/rendering time is excluded.
+- Selected by highest native mean return among completed 128-clip validation evaluations through 172k on 2026-10-24. This is validation-based model selection, not an independent test result.
+- Current weights, six gallery demos and the 24-example combined video all use 168k. Earlier 32k/36k exports and 44k demos are historical.
+- Intermediate checkpoint of a 320k schedule. Prepared 2026-10-24.
 - Weight distribution authorization: **confirmed by the publisher on 2026-10-23**. The specific weight license text remains to be supplied, separately from the MIT source-code license. See WEIGHTS_NOTICE.md. Source and release assets are maintained at [kangzejian1896/supermimic-g1-reproduction](https://github.com/kangzejian1896/supermimic-g1-reproduction).
 
 ## Inputs and outputs
@@ -28,6 +28,12 @@ Source data: https://huggingface.co/datasets/bones-studio/seed . Dataset license
 
 ## Evaluation
 
+Current **168k native validation**: **0 failures / 128**, mean normalized return **0.928972**, frame-weighted return **0.926332**. See [benchmark_168k.json](benchmark_168k.json).
+
+Current **168k visualization protocol**: **128/128 completed**, mean per-clip joint RMSE **0.088221 rad**, root-position RMSE **0.131172 m**. Same references and zero-initial-velocity settings as 32k; full trajectories, no post-alignment. See [comparison_32k_168k.json](comparison_32k_168k.json).
+
+Historical 36k results:
+
 Native deterministic benchmark, with noise/domain randomization disabled and full-reference return normalization:
 
 | 36k checkpoint | Clips | Failures | Mean normalized return |
@@ -37,7 +43,7 @@ Native deterministic benchmark, with noise/domain randomization disabled and ful
 
 These are the saved original-checkpoint benchmark aggregates; [VALIDATION.md](VALIDATION.md) records the separate release-export checks. Full-clip completion is measured against the configured pelvis-height/gravity thresholds, not a general physical safety criterion. Training coverage is not a held-out generalization metric.
 
-The earlier public 32k videos and current 44k README demos use a separate processed-reference protocol with GT first-frame pose and zero initial velocity, and continue after threshold crossings for error measurement. Do not mix those RMSE values with this benchmark's returns. Text labels shown in the demo describe references; they are not model inputs.
+The earlier public 32k videos and historical 44k README demos use a separate processed-reference protocol with GT first-frame pose and zero initial velocity, and continue after threshold crossings for error measurement. Do not mix those RMSE values with this benchmark's returns. Text labels shown in the demo describe references; they are not model inputs.
 
 ## Intended use and limitations
 

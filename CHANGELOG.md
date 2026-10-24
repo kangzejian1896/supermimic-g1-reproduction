@@ -1,3 +1,11 @@
+# Changelog
+
+## 2026-10-24 · 168k model and video release
+
+- Publish matching policy and policy/world-model/critic exports with exact inference parity.
+- Refresh six validation demos and add the full 24-example Ref/control video.
+- Record training resources, validation selection, aggregate metrics and artifact checksums.
+
 # Release candidate changes
 
 Base: CuboiLeo/SuperMimic-Reproduced d9be385b3eeb13a638fb33fb200d3bfd9be9839f.
